@@ -15,15 +15,13 @@
 
 <body>
 <?php
-	//Intialize the input and declare variables
-	$score=rand(50,100);
-	$grade='';
+	//Utilize the built in capabilites of php to grab info passed from
+	$score=(int)$_GET['score'];
 	//Determine the Grade
-	if($score>=90)$grade='A';
-	if($score>=80&&$score<90)$grade='B';
-	if($score>=70&&$score<80)$grade='C';
-	if($score>=60&&$score<70)$grade='D';
-	if($score<60)$grade='F';
+	$grade=($score>=90)?'A':(
+	       ($score>=80)?'B':(
+	       ($score>=70)?'C':(
+	       ($score>=60)?'D':'F')));
 	//Output the results
 	echo "<h1>A score of $score = $grade</h>";
 ?>

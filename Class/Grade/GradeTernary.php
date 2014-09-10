@@ -19,9 +19,9 @@
 	$score=rand(50,100);
 	//Determine the Grade
 	$grade=($score>=90)?'A':(
-	($score>=80)?'B':(
-	($score>=70)?'C':(
-	($score>=60)?'D':'F')));
+	       ($score>=80)?'B':(
+	       ($score>=70)?'C':(
+	       ($score>=60)?'D':'F')));
 	//Output the results
 	echo "<h1>A score of $score = $grade</h>";
 ?>
