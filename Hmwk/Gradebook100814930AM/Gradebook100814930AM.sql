@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `48075` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `48075`;
 -- MySQL dump 10.13  Distrib 5.6.11, for Win32 (x86)
 --
--- Host: localhost    Database: test
+-- Host: localhost    Database: 48075
 -- ------------------------------------------------------
 -- Server version	5.6.11
 
@@ -107,7 +107,7 @@ DROP TABLE IF EXISTS `entity_instructor_sb2030968`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `entity_instructor_sb2030968` (
-  `instructor_id` int(10) NOT NULL COMMENT 'Primary Key',
+  `instructor_id` int(10) NOT NULL,
   `first_name` varchar(15) DEFAULT NULL,
   `middle_initial` char(1) DEFAULT NULL,
   `last_name` varchar(20) DEFAULT NULL,
@@ -128,7 +128,6 @@ CREATE TABLE `entity_instructor_sb2030968` (
 
 
 /*!40000 ALTER TABLE `entity_instructor_sb2030968` DISABLE KEYS */;
-INSERT INTO `entity_instructor` VALUES (1111111,'Jim','J','Jones','jimjones@rcc.edu',951,2228260,12,223,1,1),(1150258,'Mark','E','Lehr','mark.lehr@rcc.edu',951,2228260,4,222,1,2);
 /*!40000 ALTER TABLE `entity_instructor_sb2030968` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,7 +181,7 @@ CREATE TABLE `enum_bldg_sb2030968` (
 
 
 /*!40000 ALTER TABLE `enum_bldg_sb2030968` DISABLE KEYS */;
-INSERT INTO `enum_bldg` VALUES (4,'Business Education','BE'),(12,'Math and Science','MAT/SCI');
+INSERT INTO `enum_bldg_sb2030968` VALUES (4,'Business Education','BE'),(12,'Math and Science','MAT/SCI');
 /*!40000 ALTER TABLE `enum_bldg_sb2030968` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -206,7 +205,7 @@ CREATE TABLE `enum_department_sb2030968` (
 
 
 /*!40000 ALTER TABLE `enum_department_sb2030968` DISABLE KEYS */;
-INSERT INTO `enum_department` VALUES (1,'Business Info Systems'),(2,'English');
+INSERT INTO `enum_department_sb2030968` VALUES (1,'Business Info Systems'),(2,'English');
 /*!40000 ALTER TABLE `enum_department_sb2030968` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -231,7 +230,7 @@ CREATE TABLE `enum_discipline_sb2030968` (
 
 
 /*!40000 ALTER TABLE `enum_discipline_sb2030968` DISABLE KEYS */;
-INSERT INTO `enum_discipline` VALUES (1,'Computer Science','CSC'),(2,'Basket Weaving','BSW');
+INSERT INTO `enum_discipline_sb2030968` VALUES (1,'Computer Science','CSC'),(2,'Basket Weaving','BSW');
 /*!40000 ALTER TABLE `enum_discipline_sb2030968` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -266,7 +265,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `xref_class_course_sb2030968`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `xref_class_course` (
+CREATE TABLE `xref_class_course_sb2030968` (
   `xref_class_course` int(10) NOT NULL,
   `class_id` int(10) DEFAULT NULL,
   `course_id` int(10) DEFAULT NULL,
@@ -330,8 +329,8 @@ CREATE TABLE `xref_student_assignments_sb2030968` (
 --
 
 
-/*!40000 ALTER TABLE `xref_student_assignments_sb2030968_sb2030968` DISABLE KEYS */;
-/*!40000 ALTER TABLE `xref_student_assignments` ENABLE KEYS */;
+/*!40000 ALTER TABLE `xref_student_assignments_sb2030968` DISABLE KEYS */;
+/*!40000 ALTER TABLE `xref_student_assignments_sb2030968` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
